@@ -1,0 +1,21 @@
+#app4 {
+}
+#app4 .circle {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+}
+#app4 .circle.active{
+    animation: change 2s infinite alternate linear;
+}
+@keyframes change {
+ from{
+     background: cornflowerblue;
+ }
+ to{
+     background: red;
+ }
+}
