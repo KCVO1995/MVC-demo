@@ -1,10 +1,9 @@
-class Model {
+import EventBus from "./EventBus.js"
+
+class Model extends EventBus{
     constructor(options) {
-        ['data', 'create', 'delete', 'update', 'get'].forEach( key => {
-            if ( key in options) {
-                this[key] = options[key]
-            }
-        })
+        super()
+        Object.assign(this, options)
     }
     create() {
         console && console.error && console.error('你还没有实现 create')
